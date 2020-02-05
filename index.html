@@ -23,16 +23,26 @@
     <h1>Guess That Flower!</h1>
 
     <div class="container">
-        <!-- <h1>Guess That Flower!</h1> -->
-        <h2>Press any key to get started!</h2>
-        <hr>
-        <p class="wins">Wins:</p>
-        <hr>
-        <p class="current-word">Current Word:</p>
-        <hr>
-        <p class="remaining">Number of Guesses Remaining:</p>
-        <hr>
-        <p class="already-guessed">Letters Already Guessed:</p>
+        <div class="wrapper">
+            <h2>Press any key to get started!</h2>
+            <hr>
+            <p class="wins">Wins:</p>
+            <p>#</p>
+            <hr>
+            <p class="current-word">Current Word:</p>
+            <!-- this lower p tag needs to be in javascript so the function will insert the place value in letters and numbers... im pretty sure.. -->
+            <p>_ _ _ _ _ _ _</p>
+            <hr>
+            <p class="remaining">Number of Guesses Remaining:</p>
+            <p>#</p>
+            <hr>
+            <p class="already-guessed">Letters Already Guessed:</p>
+            <p>_ _ _ _ _ _ _</p>
+        </div>
+        <div class="pictures">
+            <!-- the pictures need to be activated in JS whenever a word is completed or the remaining guesses are gone -->
+            <p>Win/Lose images go here</p>
+        </div>
     </div>
     
     

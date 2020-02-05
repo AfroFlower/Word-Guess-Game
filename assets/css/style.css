@@ -17,15 +17,29 @@ body.background-img {
     margin-right: auto;
 }
 
+/* Main Content Section */
+
 .container {
     background: #ffebeb;
     max-width: 800px;
-    border: 5px solid black;
+    border: 5px dotted #ffffff;
     text-align: center;
     margin: 30px auto;
     padding: 30px;
+    overflow: auto;
     /* position: absolute;
     left: 50%; */
+    /* float: left; */
+}
+
+.wrapper {
+    max-width: 500px;
+    float: right;
+    background: #ffcdcd;
+    margin: auto;
+    padding: 20px;
+    overflow: auto;
+
 }
 
 h1 {
@@ -54,4 +68,16 @@ hr {
     border: 5px solid #ffffff;
     border-radius: 10px;
     margin: 20px;
+}
+
+/* Winner and Lose Image Section and also goes into my JS as a funtion? */
+
+.pictures {
+    background: #ffa1a1;
+    max-width: 100px;
+    border: 5px solid #ffffff(255, 255, 255);
+    /* text-align: center;
+    margin: auto; */
+    padding: 30px;
+    float: clear;
 }
