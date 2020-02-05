@@ -1,21 +1,39 @@
 body {
-    /* background-image: url(../images/leonardo-wong-7pGehyH7o64-unsplash.jpg); */
+    background-image: url(../images/leonardo-wong-7pGehyH7o64-unsplash.jpg);
+    /* background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+body.background-img {
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
-    background: lightpink;
-    width: 800px;
+    background: #ffebeb;
+    max-width: 800px;
     border: 5px solid black;
     text-align: center;
-    margin: 10px;
+    margin: 30px auto;
     padding: 30px;
+    /* position: absolute;
+    left: 50%; */
 }
 
 h1 {
     font-size: 40px;
+    padding: 20px;
     text-align: center;
     color: white;
-    background: yellowgreen;
+    background: #ffcdcd;
 }
 
 h2 {
@@ -30,4 +48,10 @@ p {
     /* text-align: center; */
     color: black;
     margin-top: 20px;
+}
+
+hr {
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    margin: 20px;
 }
