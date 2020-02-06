@@ -10,12 +10,9 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- Css Stylesheet link here -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
     <!-- add jQuery link in script src  -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Javascript link here or in the scrpit tag? -->
-    <script src="./assets/javascript/game.js"></script>
 
 </head>
 <body class="background-img">
@@ -29,9 +26,9 @@
             <p class="wins">Wins:</p>
             <p>#</p>
             <hr>
-            <p class="current-word">Current Word:</p>
+            <p class="word">Word:</p>
             <!-- this lower p tag needs to be in javascript so the function will insert the place value in letters and numbers... im pretty sure.. -->
-            <p>_ _ _ _ _ _ _</p>
+            <p id="inputLetter">_ _ _ _ _ _ _</p>
             <hr>
             <p class="remaining">Number of Guesses Remaining:</p>
             <p>#</p>
@@ -68,6 +65,8 @@
 
     9. After the user wins/loses the game should automatically choose another word and make the user play it. -->
 
+    <!-- Javascript link here below the body tag-->
+    <script src="./assets/javascript/game.js"></script>
 
 </body>
 </html>
