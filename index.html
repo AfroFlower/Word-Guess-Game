@@ -17,24 +17,25 @@
 </head>
 <body class="background-img">
 
-    <h1>Guess That Flower!</h1>
+    <header>Guess That Flower!</header>
 
     <div class="container">
         <div class="wrapper">
             <h2>Press any key to get started!</h2>
             <hr>
-            <p class="wins">Wins:</p>
-            <p>#</p>
-            <hr>
-            <p class="word">Word:</p>
+            <p>The Word</p>
+            <p id="word"></p>
             <!-- this lower p tag needs to be in javascript so the function will insert the place value in letters and numbers... im pretty sure.. -->
-            <p id="inputLetter">_ _ _ _ _ _ _</p>
+            <p id="inputLetter"></p>
             <hr>
-            <p class="remaining">Number of Guesses Remaining:</p>
-            <p>#</p>
+            <p>Number of Guesses Remaining:</p>
+            <p id="guessesRemaining"></p>
             <hr>
-            <p class="already-guessed">Letters Already Guessed:</p>
-            <p>_ _ _ _ _ _ _</p>
+            <p>Letters Already Guessed:</p>
+            <p id="already-guessed"></p>
+            <hr>
+            <p>Wins:</p>
+            <p id="wins"></p>
         </div>
         <div class="pictures">
             <!-- the pictures need to be activated in JS whenever a word is completed or the remaining guesses are gone -->
@@ -66,7 +67,9 @@
     9. After the user wins/loses the game should automatically choose another word and make the user play it. -->
 
     <!-- Javascript link here below the body tag-->
-    <script src="./assets/javascript/game.js"></script>
+    <!-- <script src="./assets/javascript/game.js"></script> -->
+    <script src="./assets/javascript/test.js"></script>
+
 
 </body>
 </html>
