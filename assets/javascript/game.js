@@ -1,17 +1,20 @@
 $(document).ready(function () {
     alert("Welcome To The Game! Press any letter key to get started!");
 
+    // WORD VARIABLES
+    var words = ["rose", "tulip", "sunflower", "daisy",]
+
     // Make variables for the first letter and/or second letter, 
     // and other inputs/outputs
-    // firstLetter = "";
-    // secondLetter = "";
-    // operator = "";
-    // isOperatorChosen = false;
-    // isSpelled = false;
+    var winningWord
+    var wrongGuess
+    var rightGuess
+    var wins
+    var loss
 
     // Here we are provided an initial array of letters.
-    // var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
-    // "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-"];
+    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
+    "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-"];
 
     for (var i = 0; i < letters.length; i++) {
 

@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game</title>
 
-    <!-- Reset Stylesheet link here -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <!-- Css Stylesheet link here -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- add jQuery link in script src  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
@@ -25,7 +22,6 @@
             <hr>
             <p>The Word</p>
             <p id="word"></p>
-            <!-- this lower p tag needs to be in javascript so the function will insert the place value in letters and numbers... im pretty sure.. -->
             <p id="inputLetter"></p>
             <hr>
             <p>Number of Guesses Remaining:</p>
@@ -36,6 +32,9 @@
             <hr>
             <p>Wins:</p>
             <p id="wins"></p>
+            <hr>
+            <p>Loss:</p>
+            <p id="loss"></p>
         </div>
         <div class="pictures">
             <!-- the pictures need to be activated in JS whenever a word is completed or the remaining guesses are gone -->
@@ -67,8 +66,8 @@
     9. After the user wins/loses the game should automatically choose another word and make the user play it. -->
 
     <!-- Javascript link here below the body tag-->
-    <!-- <script src="./assets/javascript/game.js"></script> -->
-    <script src="./assets/javascript/test.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+    <!-- <script src="./assets/javascript/test.js"></script> -->
 
 
 </body>
