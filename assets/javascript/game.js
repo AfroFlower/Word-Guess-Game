@@ -1,69 +1,59 @@
-// $(document).ready(function () {
-//     alert("Welcome To The Game! Press any letter key to get started!");
+$(document).ready(function () {
+  alert("Welcome To The Game! Press any letter key to get started!");
 
-//     // WORD Arry VARIABLES
-//     var words = ["rose", "tulip", "sunflower", "daisy",]
+  // WORD Arry VARIABLES
+  var words = ["rose", "tulip", "sunflower", "daisy",]
 
-//     // Make variables for the first letter and/or second letter, 
-//     // and other inputs/outputs
-//     var winningWord
-//     var remainingGuesses
-//     var correctLetters
-//     var wrongLetters
-//     var wins
-//     var loss
+   var winningWord = "";
+   var remainingGuesses = "";
+   var correctLetters = "";
+   var wrongLetters = "";
+   var wins = 0;
+   var loss = 0;
 
-//     // Here we are provided an initial array of letters.
-//     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
-//     "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-"];
+  // Here we are provided an initial array of letters.
+   var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
+   "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-"];
 
-//     for (var i = 0; i < letters.length; i++) {
+   for (let i = 0; i < letters.length; i++) {
+      // const element = letters[i];
 
-//         var letterKey = $("<inputLetter>");
+      // 2. Create a variable named "letterBtn" equal to $("<button>");
+      var letterBtn = $("<inputLetter>");
 
-//         letterKey.attr("data-letter", letters[i]);
+      // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
+      // letterBtn.addClass("letter-button letter letter-button-color");
 
-//         letterKey.text(letters[i]);
+      // 4. Then give each "letterBtn" a data-attribute called "data-letter".
+      letterBtn.attr("data-letter", letters[i]);
 
-//         $("#inputLetter").append(letterKey);
+      // 5. Then give each "letterBtns" a text equal to "letters[i]".
+      letterBtn.text(letters[i]);
 
-//     };
+      // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
+      // $("#inputLetter").append(letterBtn);
+  };
 
-//     var userText = document.getElementById("inputLetter");
-//       // Next, we give JavaScript a function to execute when onkeyup event fires.
-//       document.onkeyup = function(event){
-//       userText.textContent = event.key;
+      var userText = document.getElementById("inputLetter");
+      document.onkeyup = function(event){
+          userText.textContent = event.key;
+          
+          // 8. Create a variable called "fridgeMagnet" and set the variable equal to a new div.
+      var Key = $("inputLetter");
 
-//       var theWord = $("<div>");
+      // 9. Give each "fridgeMagnet" the following classes: "letter fridge-color".
+      // Key.addClass("letter fridge-color");
 
-//       letterGuessed.text($(this).attr("data-letter"));
+      // 10. Then chain the following code onto the "fridgeMagnet" variable: .text($(this).attr("data-letter"))
+      // attr acts as both a setter and a getter for attributes depending on whether we supply one argument or two
+      // NOTE: There IS a $(data) jQuery method, but it doesn't do what you'd expect. So just use attr.
+      Key.text($(this).attr("data-letter"));
 
-//       $("#inputLetter").append(letterGuessed);
-//     }; 
+      // 11. Lastly append the fridgeMagnet variable to the "#display" div (provided);
+      // Again you can see we use that find, and once its found we append the item
+      $("#inputLetter").append(letterBtn);
 
-// });
-
-
-
-
-// // Code comment section
-
-// // 1. Create the html page and basic format
-// // 2. insert the js and css external files 
-// // 3. insert jquery link
-// // 4. style the css 
-// // 5. use a function to alert the user to the page when it first loads
-// // 6. 
-
-// // ***From the calculator test, use this example to clear your game when the 
-// // final image result pops up*** Use a function to initialize our calculator.
-//       // This way when the user hits clear, we can guarantee a reset of the app.
-//       // function initializeCalculator() {
-//       //   firstNumber = "";
-//       //   secondNumber = "";
-//       //   operator = "";
-//       //   isOperatorChosen = false;
-//       //   isCalculated = false;
-
-//       //   $("#first-number, #second-number, #operator, #result").empty();
-//       // }
+      console.log(Key);
+          
+  };
+});
