@@ -3,6 +3,8 @@ $(document).ready(function (){
 
     // Word Array Variables
     var allWords = ["rose", "tulip", "sunflower", "daisy",]
+    // create a string function
+
     // randomizes the word choice
     var word = allWords[Math.floor(Math.random() * allWords.length)];
 
@@ -11,6 +13,9 @@ $(document).ready(function (){
     for (var i = 0; i < word.length; i++){
         answerArray[i] = "_";
     };
+
+
+
     
     $("#correct-letters").append(answerArray.join(" "))
 
@@ -33,15 +38,17 @@ $(document).ready(function (){
             correctLetters = $("#correct-letters")
             console.log(correctLetters)
 
-            winningWord = $(answerArray[i]);
-            console.log(winningWord)
+            // winningWord = $(answerArray[i]);
+            // console.log(winningWord)
+
+            // if userLetter equals answerArray then 
 
             for (var i = 0; i < word.length; i++){
-                if (word[i] === userLetter ) {
-                    word[i] = $("#correct-letters").text(answerArray.join(" "));
-                    // answerArray[i] = $("#correct-letters").append(userLetter);
+                if (answerArray[i] === userLetter ){
+                    answerArray[i].split()
+                    console.log(answerArray[i].split());
                 }
-                console.log(word);
+                // console.log(word);
             };
 
             // the correct letter must equal a place value in the correct word array
