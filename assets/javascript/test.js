@@ -30,12 +30,18 @@ $(document).ready(function (){
             var userLetter = event.key;
             console.log(userLetter)
 
-            correctLetters = $("correct-letters")
+            correctLetters = $("#correct-letters")
             console.log(correctLetters)
 
+            winningWord = $(answerArray[i]);
+            console.log(winningWord)
+
             for (var i = 0; i < word.length; i++){
-                word[i]
-                console.log();
+                if (word[i] === userLetter ) {
+                    word[i] = $("#correct-letters").text(answerArray.join(" "));
+                    // answerArray[i] = $("#correct-letters").append(userLetter);
+                }
+                console.log(word);
             };
 
             // the correct letter must equal a place value in the correct word array
