@@ -1,19 +1,21 @@
 $(document).ready(function (){
     alert("Welcome To The Game! Press any letter key to get started!");
 
-    // Word Arry Variables
-    var words = ["rose", "tulip", "sunflower", "daisy",]
-    // randomizes the word
-    var word = words[Math.floor(Math.random() * words.length)];
+    // Word Array Variables
+    var allWords = ["rose", "tulip", "sunflower", "daisy",]
+    // randomizes the word choice
+    var word = allWords[Math.floor(Math.random() * allWords.length)];
 
     // answerArray inputs underscores in word length value
     var answerArray = [];
-    for (var i = 0; i < word.length; i++) {
+    for (var i = 0; i < word.length; i++){
         answerArray[i] = "_";
-    }
+    };
     
+    $("#correct-letters").append(answerArray.join(" "))
+
     var remainingLetters = word.length;
-    console.log(answerArray)
+    console.log(answerArray.join(" "))
 
     var winningWord = "";
     var remainingGuesses = 0;
@@ -23,34 +25,34 @@ $(document).ready(function (){
     var loss = 0;    
 
 
-    var userText = document.getElementById("correct-letter");
-        document.onkeyup = function(event){
-           userText.textContent = event.key;
+    document.onkeyup = function(event){
+
+            var userLetter = event.key;
+            console.log(userLetter)
+
+            correctLetters = $("correct-letters")
+            console.log(correctLetters)
+
+            for (var i = 0; i < word.length; i++){
+                word[i]
+                console.log();
+            };
+
+            // the correct letter must equal a place value in the correct word array
+            // if (){
+               
+            // };
+
+            // Show player remaining underscore spaces after they enter a correct letter
+
+            // if (remainingLetters > 0) {
+            //     // Show the player their progress
+            //     return (answerArray.join(" "));
+            // };  
             
-           remainingLetters = $("correct-letter");
-
-            // $("#correct-letter").append(correctLetters);
-
-
-            if (remainingLetters > 0) {
-                // Show the player their progress
-                return (answerArray.join(" "));
-            };   
-
-            console.log(remainingLetters)
-            
+            // when player enters the correct letter for the random word, push the letter it to 
+            // the correct placement in the answer array?
         };
 
-        // if (isOperatorChosen) {
-        //     secondNumber += $(this).val();
-        //     $("#second-number").text(secondNumber);
-  
-        //   }
-        //   else {
-        //     firstNumber += $(this).val();
-        //     $("#first-number").text(firstNumber);
-        //   }
-  
-        // });
 });
     
