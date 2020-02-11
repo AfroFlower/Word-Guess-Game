@@ -3,8 +3,7 @@ $(document).ready(function (){
 
     // Word Array Variables
     var allWords = ["rose", "tulip", "sunflower", "daisy",]
-    // create a string function
-
+    
     // randomizes the word choice
     var word = allWords[Math.floor(Math.random() * allWords.length)];
 
@@ -12,10 +11,11 @@ $(document).ready(function (){
     var answerArray = [];
     for (var i = 0; i < word.length; i++){
         answerArray[i] = "_";
-    };
+    };    
 
-
-
+    // create a string function for each word and thier index
+    var wordsArray = word.split("");
+    console.log(wordsArray);
     
     $("#correct-letters").append(answerArray.join(" "))
 
@@ -43,13 +43,12 @@ $(document).ready(function (){
 
             // if userLetter equals answerArray then 
 
-            for (var i = 0; i < word.length; i++){
-                if (answerArray[i] === userLetter ){
-                    answerArray[i].split()
-                    console.log(answerArray[i].split());
-                }
-                // console.log(word);
-            };
+            // for (var i = 0; i < word.length; i++){
+            //     if (answerArray[i] === userLetter ){
+                    
+            //     }
+            //     // console.log(word);
+            // };
 
             // the correct letter must equal a place value in the correct word array
             // if (){
