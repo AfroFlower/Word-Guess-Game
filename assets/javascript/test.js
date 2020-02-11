@@ -1,3 +1,5 @@
+// this file is for testing out code
+
 $(document).ready(function (){
     alert("Welcome To The Game! Press any letter key to get started!");
 
@@ -16,7 +18,9 @@ $(document).ready(function (){
     // create a string function for each word and thier index
     var wordsArray = word.split("");
     console.log(wordsArray);
-    
+    var res = word.charAt(0);
+    console.log(res);
+
     $("#correct-letters").append(answerArray.join(" "))
 
     var remainingLetters = word.length;
@@ -28,7 +32,6 @@ $(document).ready(function (){
     var wrongLetters = "";
     var wins = 0;
     var loss = 0;    
-
 
     document.onkeyup = function(event){
 
@@ -43,11 +46,9 @@ $(document).ready(function (){
 
             // if userLetter equals answerArray then 
 
-            // for (var i = 0; i < word.length; i++){
-            //     if (answerArray[i] === userLetter ){
-                    
+            // for (var i = 0; i < word.charAt(1), i++){
+            //     if (word === wordsArray ){
             //     }
-            //     // console.log(word);
             // };
 
             // the correct letter must equal a place value in the correct word array
@@ -67,4 +68,3 @@ $(document).ready(function (){
         };
 
 });
-    

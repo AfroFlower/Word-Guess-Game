@@ -1,59 +1,68 @@
-$(document).ready(function () {
-  alert("Welcome To The Game! Press any letter key to get started!");
+$(document).ready(function (){
+    alert("Welcome To The Game! Press any letter key to get started!");
 
-  // WORD Arry VARIABLES
-  var words = ["rose", "tulip", "sunflower", "daisy",]
+    // Word Array Variables
+    var allWords = ["rose", "tulip", "sunflower", "daisy",]
+    
+    // randomizes the word choice
+    var word = allWords[Math.floor(Math.random() * allWords.length)];
 
-   var winningWord = "";
-   var remainingGuesses = "";
-   var correctLetters = "";
-   var wrongLetters = "";
-   var wins = 0;
-   var loss = 0;
+    // answerArray inputs underscores in word length value
+    var answerArray = [];
+    for (var i = 0; i < word.length; i++){
+        answerArray[i] = "_";
+    };    
 
-  // Here we are provided an initial array of letters.
-   var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
-   "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "-"];
+    // create a string function for each word and thier index
+    var wordsArray = word.split("");
+    console.log(wordsArray);
+    var res = word.charAt(0);
+    console.log(res);
 
-   for (let i = 0; i < letters.length; i++) {
-      // const element = letters[i];
+    $("#correct-letters").append(answerArray.join(" "))
 
-      // 2. Create a variable named "letterBtn" equal to $("<button>");
-      var letterBtn = $("<inputLetter>");
+    var remainingLetters = word.length;
+    console.log(answerArray.join(" "))
 
-      // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-      // letterBtn.addClass("letter-button letter letter-button-color");
+    var winningWord = "";
+    var remainingGuesses = 0;
+    var correctLetters = "";
+    var wrongLetters = "";
+    var wins = 0;
+    var loss = 0;    
 
-      // 4. Then give each "letterBtn" a data-attribute called "data-letter".
-      letterBtn.attr("data-letter", letters[i]);
+    document.onkeyup = function(event){
 
-      // 5. Then give each "letterBtns" a text equal to "letters[i]".
-      letterBtn.text(letters[i]);
+            var userLetter = event.key;
+            console.log(userLetter)
 
-      // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
-      // $("#inputLetter").append(letterBtn);
-  };
+            correctLetters = $("#correct-letters")
+            console.log(correctLetters)
 
-      var userText = document.getElementById("inputLetter");
-      document.onkeyup = function(event){
-          userText.textContent = event.key;
-          
-          // 8. Create a variable called "fridgeMagnet" and set the variable equal to a new div.
-      var Key = $("inputLetter");
+            // winningWord = $(answerArray[i]);
+            // console.log(winningWord)
 
-      // 9. Give each "fridgeMagnet" the following classes: "letter fridge-color".
-      // Key.addClass("letter fridge-color");
+            // if userLetter equals answerArray then 
 
-      // 10. Then chain the following code onto the "fridgeMagnet" variable: .text($(this).attr("data-letter"))
-      // attr acts as both a setter and a getter for attributes depending on whether we supply one argument or two
-      // NOTE: There IS a $(data) jQuery method, but it doesn't do what you'd expect. So just use attr.
-      Key.text($(this).attr("data-letter"));
+            // for (var i = 0; i < word.charAt(1), i++){
+            //     if (word === wordsArray ){
+            //     }
+            // };
 
-      // 11. Lastly append the fridgeMagnet variable to the "#display" div (provided);
-      // Again you can see we use that find, and once its found we append the item
-      $("#inputLetter").append(letterBtn);
+            // the correct letter must equal a place value in the correct word array
+            // if (){
+               
+            // };
 
-      console.log(Key);
-          
-  };
+            // Show player remaining underscore spaces after they enter a correct letter
+
+            // if (remainingLetters > 0) {
+            //     // Show the player their progress
+            //     return (answerArray.join(" "));
+            // };  
+            
+            // when player enters the correct letter for the random word, push the letter it to 
+            // the correct placement in the answer array?
+        };
+
 });
