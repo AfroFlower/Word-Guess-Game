@@ -1,21 +1,8 @@
-/* body { */
-    /* background-image: url(../images/leonardo-wong-7pGehyH7o64-unsplash.jpg); */
-    /* background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; */
-/* } */
-
-/* body.background-img {
-    background-repeat: no-repeat;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
+#title {
+    text-align: center; 
+    background-color: #ffa1a1; 
+    margin: 10px 0px 10px 0px;
+}
 
 /* Main Content Section */
 
@@ -41,12 +28,8 @@ body, html {
     max-width: 800px;
     border: 7px solid #ffffff;
     text-align: center;
-    /* margin: 30px auto;
-    padding: 30px; */
     overflow: auto;
-    /* position: absolute;
-    left: 50%; */
-    /* float: left; */
+    opacity: 1px;
 }
 
 .wrapper {
