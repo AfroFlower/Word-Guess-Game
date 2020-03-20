@@ -40,31 +40,6 @@ $(document).ready(function (){
 
             correctLetters = $("#correct-letters")
             console.log(correctLetters)
-
-            // winningWord = $(answerArray[i]);
-            // console.log(winningWord)
-
-            // if userLetter equals answerArray then 
-
-            // for (var i = 0; i < word.charAt(1), i++){
-            //     if (word === wordsArray ){
-            //     }
-            // };
-
-            // the correct letter must equal a place value in the correct word array
-            // if (){
-               
-            // };
-
-            // Show player remaining underscore spaces after they enter a correct letter
-
-            // if (remainingLetters > 0) {
-            //     // Show the player their progress
-            //     return (answerArray.join(" "));
-            // };  
-            
-            // when player enters the correct letter for the random word, push the letter it to 
-            // the correct placement in the answer array?
         };
 
 });
